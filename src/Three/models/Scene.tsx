@@ -36,8 +36,6 @@ export default function Scene() {
         <group>
             <Suspense fallback={null}>
                 <Physics gravity={[0, -30.81, 0]} paused={!ready}>
-                    <Suspense fallback={null}>
-
                         <PlateSushi position={[2.687, 3, 0.378]} scale={5.691}/>
                         <BackGroundPlane/>
                         <Sushi position={[-0.239, 5, 1.889]} scale={0.898}/>
@@ -73,7 +71,6 @@ export default function Scene() {
                         <Bow position={[-0.292, 3.467, -4.7]} scale={[1.897, 1.106, 1.106]}/>
                         <Wasabi position={[3.547, 3.477, -4.713]} scale={0.721}  />
                         <PhysicsReadyTrigger onReady={() => setReady(true)} />
-                    </Suspense>
                 </Physics>
             </Suspense>
             <AreaLightWhite/>
